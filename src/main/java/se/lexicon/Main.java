@@ -1,6 +1,8 @@
 package se.lexicon;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class Main {
     static void main(){
@@ -57,6 +59,9 @@ public class Main {
             }
             IO.println();
         }
+
+        //Exercise 11:
+        reverseArray();
     }
 
     // This method stores elements in an array of type int and print it out.
@@ -152,5 +157,37 @@ public class Main {
         }
 
         return multiplicationTable;
+    }
+
+    //This method will let the user decide array size,
+    // Then take user inputs until fills the array and then reverse the array elements and print it.
+    static void reverseArray(){
+
+        IO.print("How many numbers you want to Enter: ");
+        int arraySize = validateInt();
+
+        Integer[] newArray = new Integer[arraySize];
+
+        for(int i=0;i<newArray.length; i++){
+
+            IO.print("Enter ["+(i+1)+"] number of "+arraySize+" Numbers: ");
+            newArray[i] = validateInt();
+        }
+        IO.println("Original Array: "+Arrays.toString(newArray));
+        Collections.reverse(Arrays.asList(newArray));
+        IO.println("Reversed Array: "+Arrays.toString(newArray));
+    }
+
+    static int validateInt(){
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            try {
+                return scanner.nextInt();
+            } catch (Exception e) {
+                System.out.print("Invalid! Please Enter Valid Number: ");
+                scanner.next();
+            }
+        }
     }
 }
