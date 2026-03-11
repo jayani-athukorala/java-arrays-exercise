@@ -1,8 +1,4 @@
-![Lexicon Logo](https://lexicongruppen.se/media/wi5hphtd/lexicon-logo.svg)
-
 # Array Exercises : Answers
-
----
 
 ## 🛠  How to Run :
 1. Clone the Repository
@@ -23,7 +19,7 @@ You can find the exercise description here:
 
 ---
 
-## Expected Output :
+## ⚡ Expected Output :
 
 ```
 ==========Hello and welcome!============
